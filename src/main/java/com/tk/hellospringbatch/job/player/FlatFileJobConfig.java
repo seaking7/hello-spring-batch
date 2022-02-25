@@ -42,7 +42,6 @@ public class FlatFileJobConfig {
                 .incrementer(new RunIdIncrementer())
                 .start(flatFileStep)
                 .build();
-
     }
 
     @JobScope
@@ -79,7 +78,6 @@ public class FlatFileJobConfig {
                 .resource(resource)
                 .lineAggregator(lineAggregator)
                 .build();
-
     }
 
     @StepScope

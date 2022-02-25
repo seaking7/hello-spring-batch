@@ -60,6 +60,7 @@ public class MultiThreadStepJobConfig {
     @Bean
     public TaskExecutor taskExecutor(){
         SimpleAsyncTaskExecutor taskExecutor = new SimpleAsyncTaskExecutor("sprint-batch-task-executor");
+        taskExecutor.setConcurrencyLimit(4);
         return taskExecutor;
     }
 
